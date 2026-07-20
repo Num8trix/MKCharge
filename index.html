@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Roofing in Milton Keynes — Ridgeline Roofing MK</title>
+<title>Roofing in Milton Keynes — MKRoofQuotes</title>
 <meta name="description" content="Roof repairs, re-roofs and emergency call-outs across Milton Keynes. Get a free, no-obligation roofing estimate from local certified roofers.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
@@ -59,17 +59,9 @@
     display:flex; align-items:center; justify-content:space-between;
     padding:16px 24px; max-width:1120px; margin:0 auto;
   }
-  .logo{font-family:'Oswald',sans-serif; font-weight:700; font-size:1.15rem; display:flex; align-items:center; gap:8px;}
+  .logo{font-family:'Oswald',sans-serif; font-weight:700; font-size:1.15rem; display:flex; align-items:center; gap:8px; text-decoration:none;}
   .logo .mark{color:var(--rust);}
-  .nav-links{display:flex; align-items:center; gap:28px; list-style:none; margin:0; padding:0;}
-  .nav-links a{text-decoration:none; color:var(--muted); font-size:0.92rem;}
-  .nav-links a:hover{color:var(--text);}
-  .nav-cta{display:inline-flex;}
-  @media (max-width: 719px) {
-    .nav-links{display:none;}
-    .nav-cta{display:inline-flex; padding:10px 18px; font-size:0.9rem;}
-    nav{padding:14px 20px;}
-  }
+
   .btn{
     display:inline-flex; align-items:center; gap:8px;
     padding:12px 22px; border-radius:6px; font-weight:600; font-size:0.92rem;
@@ -79,9 +71,7 @@
   }
   .btn-primary{background:var(--rust); color:#fff;}
   .btn-primary:hover{transform:translateY(-2px); box-shadow:0 10px 24px -8px rgba(193,80,46,0.55);}
-  .btn-ghost{border-color:var(--line); color:var(--text);}
-  .btn-ghost:hover{border-color:var(--muted);}
-  .btn-lg{padding:16px 30px; font-size:1rem;}
+  .btn-lg{padding:16px 34px; font-size:1.02rem;}
 
   /* ---------- hero ---------- */
   .hero{
@@ -120,7 +110,7 @@
   }
   .hero-ctas{display:flex; gap:14px; justify-content:center; flex-wrap:wrap;}
 
-  /* roofline signature illustration */
+  /* roofline signature illustration — clean repeating pitch, no floating chimney */
   .roofline{position:relative; max-width:1120px; margin:0 auto; padding:0 24px;}
   .roofline svg{display:block; width:100%; height:auto;}
   .roofline path.stroke{
@@ -129,7 +119,6 @@
     animation:draw 2.4s cubic-bezier(.2,.7,.3,1) forwards .2s;
   }
   .roofline path.fill{fill:var(--bg-alt); opacity:0.9;}
-  .roofline rect.chimney{fill:var(--slate); opacity:0.85;}
   @keyframes draw{ to{ stroke-dashoffset:0; } }
 
   /* jagged roof-pitch divider between sections */
@@ -179,14 +168,15 @@
   @media(min-width:860px){ .estimate-grid{grid-template-columns:1fr 1fr;} }
   .calc-card{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:32px;}
   .field-label{display:flex; justify-content:space-between; font-size:0.85rem; color:var(--muted); margin-bottom:10px;}
-  .field-label .val{color:var(--rust); font-family:'IBM Plex Mono',monospace;}
+  .field-label .val{color:var(--rust); font-family:'IBM Plex Mono',monospace; text-align:right;}
   select.calc-select{
     width:100%; margin-bottom:22px; background:var(--bg-alt); border:1px solid var(--line);
     border-radius:8px; padding:11px 12px; color:var(--text); font-family:'Work Sans',sans-serif; font-size:0.92rem;
   }
-  input[type="range"]{width:100%; accent-color:var(--rust); margin-bottom:6px;}
+  input[type="range"]{width:100%; accent-color:var(--rust); margin-bottom:8px;}
   .size-row{transition:opacity .2s ease;}
   .size-row.dim{opacity:0.35; pointer-events:none;}
+  .size-scale{display:flex; justify-content:space-between; font-size:0.72rem; color:var(--muted); margin-bottom:4px;}
   .size-note{font-size:0.78rem; color:var(--muted); margin:0 0 22px;}
   .result{padding-top:18px; margin-top:16px; border-top:1px dashed var(--line);}
   .result .num{font-family:'Oswald',sans-serif; font-size:2rem; font-weight:600; color:var(--text); margin-bottom:10px;}
@@ -254,14 +244,8 @@
 
 <header>
   <nav>
-    <a href="index.html" class="logo"><span class="mark">Ridgeline</span><span> Roofing MK</span></a>
-    <ul class="nav-links">
-      <li><a href="#why">Why Us</a></li>
-      <li><a href="#estimate">Get an Estimate</a></li>
-      <li><a href="#reviews">Reviews</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-    </ul>
-    <a href="#quote" class="btn btn-primary nav-cta">Get a Quote</a>
+    <a href="index.html" class="logo"><span class="mark">MKRoof</span><span>Quotes</span></a>
+    <a href="#quote" class="btn btn-primary">Get a Quote</a>
   </nav>
 </header>
 
@@ -273,14 +257,12 @@
     <p class="lead">NFRC-registered roofers covering leaks, storm damage and full re-roofs across Milton Keynes — most jobs quoted within 24 hours.</p>
     <div class="hero-ctas">
       <a href="#quote" class="btn btn-primary btn-lg">Get My Free Roof Estimate</a>
-      <a href="#estimate" class="btn btn-ghost btn-lg">See Rough Pricing</a>
     </div>
   </div>
   <div class="roofline" aria-hidden="true">
-    <svg viewBox="0 0 800 190" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-      <path class="fill" d="M0,190 L0,150 L80,90 L160,150 L240,90 L320,150 L400,90 L480,150 L560,90 L640,150 L720,90 L800,150 L800,190 Z"></path>
-      <rect class="chimney" x="298" y="52" width="14" height="40"></rect>
-      <path class="stroke" d="M0,150 L80,90 L160,150 L240,90 L320,150 L400,90 L480,150 L560,90 L640,150 L720,90 L800,150"></path>
+    <svg viewBox="0 0 800 150" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path class="fill" d="M0,150 L0,110 L80,50 L160,110 L240,50 L320,110 L400,50 L480,110 L560,50 L640,110 L720,50 L800,110 L800,150 Z"></path>
+      <path class="stroke" d="M0,110 L80,50 L160,110 L240,50 L320,110 L400,50 L480,110 L560,50 L640,110 L720,50 L800,110"></path>
     </svg>
   </div>
 </section>
@@ -318,26 +300,32 @@
     <div class="section-head">
       <span class="kicker mono">ROUGH PRICING</span>
       <h2>What's your roof job likely to cost?</h2>
-      <p>Pick the job type and roof area for a ballpark figure.</p>
+      <p>Answer two quick questions for a ballpark figure — no roofing knowledge needed.</p>
     </div>
     <div class="estimate-grid">
       <div class="calc-card">
-        <label class="field-label" for="jobType"><span>Job type</span></label>
-        <select id="jobType" class="calc-select" aria-label="Job type">
-          <option value="emergency">Emergency leak repair</option>
-          <option value="gutter">Gutter, fascia &amp; flashing only</option>
-          <option value="partial">Partial re-roof (single face)</option>
-          <option value="full" selected>Full re-roof</option>
+        <label class="field-label" for="jobType"><span>What do you need done?</span></label>
+        <select id="jobType" class="calc-select" aria-label="What do you need done?">
+          <option value="emergency">Fix a leak or storm damage now</option>
+          <option value="gutter">Repair gutters, trim or flashing</option>
+          <option value="partial">Replace part of my roof</option>
+          <option value="full" selected>Replace my whole roof</option>
         </select>
 
         <div class="size-row" id="sizeRow">
           <div class="field-label">
-            <span>Roof area to be worked on</span>
-            <span class="val mono"><span id="sizeOut">80</span> m²</span>
+            <span>How big is your house?</span>
+            <span class="val mono" id="sizeOut">Semi-detached</span>
           </div>
-          <input type="range" id="roofSize" min="20" max="250" value="80" step="5" aria-label="Roof area in square metres">
+          <input type="range" id="roofSize" min="0" max="3" value="1" step="1" aria-label="House size">
+          <div class="size-scale">
+            <span>Terraced</span>
+            <span>Semi</span>
+            <span>Detached</span>
+            <span>Large detached</span>
+          </div>
         </div>
-        <p class="size-note" id="sizeNote">Rough guide only — a survey confirms the exact area.</p>
+        <p class="size-note" id="sizeNote">Rough guide only — a survey confirms the exact size.</p>
 
         <div class="result">
           <div class="num" id="costOut">£5,600 – £8,000</div>
@@ -349,7 +337,7 @@
         <ul>
           <li>Based on typical Milton Keynes material and labour rates</li>
           <li>Assumes standard access — scaffold needs can shift the price</li>
-          <li>Emergency and gutter work priced flat, not by area</li>
+          <li>Leak fixes and gutter work are priced flat, not by house size</li>
         </ul>
         <p style="font-size:0.8rem;">*Estimate only, for illustration — not a quote. We'll confirm exact pricing after a free survey.</p>
       </div>
@@ -503,15 +491,12 @@
 <footer>
   <div class="footer-grid">
     <div>
-      <h4>Ridgeline Roofing MK</h4>
+      <h4>MKRoofQuotes</h4>
       <p style="max-width:260px;">Roof repairs, re-roofs and emergency call-outs across Milton Keynes and surrounding villages.</p>
     </div>
     <div>
       <h4>Quick Links</h4>
       <ul>
-        <li><a href="index.html#why">Why Us</a></li>
-        <li><a href="index.html#estimate">Get an Estimate</a></li>
-        <li><a href="index.html#reviews">Reviews</a></li>
         <li><a href="faq.html">FAQ</a></li>
       </ul>
     </div>
@@ -528,11 +513,11 @@
     <div>
       <h4>Contact</h4>
       <ul>
-        <li>hello@ridgelineroofingmk.com</li>
+        <li>hello@mkroofquotes.com</li>
       </ul>
     </div>
   </div>
-  <div class="footer-bottom">2026 Ridgeline Roofing MK</div>
+  <div class="footer-bottom">2026 MKRoofQuotes</div>
 </footer>
 
 <script>
@@ -554,11 +539,21 @@
   const costOut = document.getElementById('costOut');
   const badge = document.getElementById('urgencyBadge');
 
+  // House-size steps map to typical roof areas behind the scenes,
+  // so people pick a house type instead of guessing square metres.
+  const sizeSteps = [
+    { label: 'Terraced', area: 55 },
+    { label: 'Semi-detached', area: 85 },
+    { label: 'Detached', area: 130 },
+    { label: 'Large detached', area: 190 }
+  ];
+
   function fmt(n){ return '£' + Math.round(n).toLocaleString(); }
 
   function updateCalc(){
-    const size = parseInt(roofSize.value, 10);
-    sizeOut.textContent = size;
+    const step = sizeSteps[parseInt(roofSize.value, 10)];
+    sizeOut.textContent = step.label;
+    const size = step.area;
     const type = jobType.value;
     let low, high, label, cls, flat;
 
@@ -574,8 +569,8 @@
 
     sizeRow.classList.toggle('dim', flat);
     sizeNote.textContent = flat
-      ? "Size doesn't affect this estimate — it's priced flat."
-      : 'Rough guide only — a survey confirms the exact area.';
+      ? "House size doesn't affect this estimate — it's priced flat."
+      : 'Rough guide only — a survey confirms the exact size.';
 
     costOut.textContent = fmt(low) + ' – ' + fmt(high);
     badge.textContent = label;
