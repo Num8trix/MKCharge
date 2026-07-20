@@ -69,8 +69,8 @@
   .toc a:hover{color:var(--rust);}
   .side-cta{margin-top:24px; background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:24px; text-align:center;}
   .side-cta p{color:var(--muted); font-size:0.9rem; margin:0 0 16px;}
-  aside{position:relative;}
-  @media(min-width:900px){ aside > div{position:sticky; top:96px;} }
+  aside.page-aside{position:relative;}
+@media(min-width:900px){ aside.page-aside > div{position:sticky; top:96px;} }
 
   table{width:100%; border-collapse:collapse; margin:0 0 1.6em; font-size:0.92rem;}
   caption{caption-side:bottom; color:var(--muted); font-size:0.78rem; text-align:left; padding-top:8px;}
@@ -289,7 +289,7 @@
 
     </div>
 
-    <aside>
+    <aside class="page-aside">
       <div>
         <nav class="toc">
           <h3>On this page</h3>
